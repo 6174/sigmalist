@@ -1,0 +1,27 @@
+{
+  "name": "sigmalist",
+  "version": "0.0.0",
+  "description": "list hub",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/6174/Timothy.git"
+  },
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-watch": "latest",
+    "gulp-less": "latest"
+  },
+  "author": "6174",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/6174/Listub/issues"
+  },
+  "homepage": "https://github.com/6174/Listub"
+}

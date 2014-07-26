@@ -1,0 +1,78 @@
+@import '../timothy-base.less';
+
+/*----------------------------
+ * bar configuration
+ *----------------------------*/
+@bar-height: 44px;
+@bar-padding: 10px;
+@bar-basic-border: 1px solid #ddd;
+@bar-basic-bg: #e6e6e6; 
+
+/*----------------------------
+ * bar base
+ *----------------------------*/
+.bar{
+  height: @bar-height;
+  padding: 0 @bar-padding;
+  -webkit-backface-visibility: hidden; // Make sure the bar is visible when a modal animates in.
+    backface-visibility: hidden;
+  .clearfix();
+  &.fixed{
+  	position: fixed;
+  	right: 0;
+  	left: 0;
+    z-index: 10;
+  }
+  .title{
+  	position: absolute;
+  	display: block;
+  	padding: 0;
+    left: 0;
+    right: 0;
+  	margin: 0 -@bar-padding;
+  	line-height: @bar-height;
+  	text-align: center;
+  	white-space: nowrap;
+  }
+  .button{
+  	position: relative;
+  	top: 7px;
+  	z-index: 20;
+  	margin-top: 0;
+  	font-weight: 400;
+  }
+
+  .icon{
+  	position: relative;
+  	z-index: 20;
+  	padding-top: 10px;
+  	padding-bottom: 10px;
+    font-size: 24px;
+  }
+
+  span{
+    position: relative;
+    top: 12px;
+    margin-right: 10px;
+  }
+
+  a{
+  	text-decoration: none;
+  	color: inherit;
+  	border-bottom: none;
+  }
+}
+
+
+.bar.basic{
+  background-color: @bar-basic-bg;
+  border-bottom: @bar-basic-border;
+  .title{
+  	font-weight: 500;
+  	font-size: 17px;
+  	color: #000;
+  }
+
+}
+
+

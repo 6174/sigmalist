@@ -1,4 +1,21 @@
 @import 'timothy-base.less';
+/*-----------------------------
+ * 自定义组件
+ *-----------------------------*/
+@import 'base/visibility.less';
+@import 'base/font-awesome.less';
+@import 'base/animation.less';
+@import 'components/bar.less';
+@import 'components/dimmer.less';
+@import 'elements/button.less';
+@import 'elements/form.less';
+@import 'elements/input.less';
+@import 'elements/label.less';
+@import 'elements/segment.less';
+@import 'components/menu.less';
+@import 'components/affix.less';
+@import 'components/tooltip.less';
+
 
 /* 默认的字体颜色， 背景色 */
 html, body{
@@ -17,14 +34,13 @@ html, body{
 
 
 /* 让链接在 hover 状态下显示下划线 */
-a{ color:#1abc9c; }
-a:hover{ text-decoration:underline; }
+// a{ color:#1abc9c; }
+// a:hover{ text-decoration:underline; }
 
-a{ border-bottom:1px solid #1abc9c; }
-a:hover{ border-bottom-color:#555; color:#555; text-decoration:none; }
-a{
-  text-decoration: none;
-}
+// a:hover{ border-bottom-color:#555; color:#555; text-decoration:none; }
+// a{
+//   text-decoration: none;
+// }
 
 /* 一致化 horizontal rule */
 hr{
@@ -36,6 +52,12 @@ hr{
   *margin:-7px 0 2px;
 }
 
+.pull-left{
+	float: left;
+}
+.pull-right{
+	float: right;
+}
 
 /* reset box-sizing */
 *, *:after, *:before{
@@ -45,12 +67,6 @@ hr{
 }
 
 
-/*-----------------------------
- * 自定义组件
- *-----------------------------*/
-@import 'base/visibility.less';
-@import 'base/font-awesome.less';
-@import 'base/animation.less';
 //--grid system
 .makeRow(12, 10);
 .makeBlockGrid();
@@ -63,7 +79,6 @@ html, body{
  * meta 标记query string size 
  * js共享css中的配置
  *-------------------------------*/
-
  meta{
  	&.version{
  		font-family: "/0.0.1" !important;

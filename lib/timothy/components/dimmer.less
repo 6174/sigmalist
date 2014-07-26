@@ -1,0 +1,148 @@
+@import '../timothy-base.less';
+ 
+.dimmable {
+  position: relative;
+}
+
+.dimmer {
+  display: none;
+  position: absolute;
+  top: 0em !important;
+  left: 0em !important;
+  margin: 0px !important;
+  width: 0%;
+  height: 0%;
+
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  line-height: 1;
+
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+
+  transition: background-color 0.5s linear;
+
+  user-select: none;
+  box-sizing: border-box;
+
+  z-index: 1000;
+  color: @white;
+}
+
+/* Dimmer Content */
+.dimmer > .content {
+  width: 100%;
+  height: 100%;
+  display: table;
+  user-select: text;
+}
+.dimmer > .content > div {
+  display: table-cell;
+  vertical-align: middle;
+  color: #FFFFFF;
+}
+
+.round.dimmer{
+	border-radius: 5px;
+}
+
+/*******************************
+            States
+*******************************/
+
+.dimmed.dimmable:not(body) {
+  overflow: hidden;
+}
+
+.dimmed.dimmable > .animating.dimmer,
+.dimmed.dimmable > .visible.dimmer,
+.active.dimmer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.disabled.dimmer {
+  width: 0em !important;
+  height: 0em !important;
+}
+
+/*******************************
+           Variations
+*******************************/
+
+/*--------------
+      Page
+---------------*/
+
+.page.dimmer {
+  position: fixed;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+  transform-origin: center center;
+}
+
+.scrolling.dimmable > .dimmer,
+.scrolling.page.dimmer {
+  position: absolute;
+}
+
+/* Blurred Background
+body.dimmed.dimmable > :not(.dimmer){
+  filter: ~"blur(15px) grayscale(0.7)";
+}
+*/
+
+/*--------------
+    Aligned
+---------------*/
+
+.dimmer > .top.aligned.content > * {
+  vertical-align: top;
+}
+.dimmer > .bottom.aligned.content > * {
+  vertical-align: bottom;
+}
+
+/*--------------
+    Inverted
+---------------*/
+
+.inverted.dimmer {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.inverted.dimmer > .content > * {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/*--------------
+     Simple
+---------------*/
+/* Displays without javascript */
+
+.simple.dimmer {
+  display: block;
+  overflow: hidden;
+  opacity: 1;
+  z-index: -100;
+  background-color: rgba(0, 0, 0, 0);
+}
+.dimmed.dimmable > .simple.dimmer {
+  overflow: visible;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1;
+}
+
+.simple.inverted.dimmer {
+  background-color: rgba(255, 255, 255, 0);
+}
+.dimmed.dimmable > .simple.inverted.dimmer {
+  background-color: rgba(255, 255, 255, 0.85)
+}

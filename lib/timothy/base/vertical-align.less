@@ -1,0 +1,21 @@
+ // vertically align stuff
+.valign {
+    display: table;
+    &:before {
+        content:' ';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em;
+    }
+    .item{
+        display: table-cell;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: break-word;
+        vertical-align: middle;
+        padding: 0 !important;
+        margin: 0 !important;
+        white-space: normal;
+    }
+}

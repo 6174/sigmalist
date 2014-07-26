@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 // });
 
 console.log('I am restarted');
-gulp.src(['src/less/*.less'])
+gulp.src(['less/*.less'])
 	.pipe(less())    		
     .pipe(gulp.dest('css/'));
 

@@ -67225,10 +67225,12 @@ hr.spliter {
 }
 .list-item .order-indicator {
   position: absolute;
-  left: -60px;
+  left: -120px;
   font-size: 30px;
   top: -10px;
   color: #969696;
+  width: 100px;
+  text-align: right;
 }
 .list-item p {
   padding-left: 10px;
